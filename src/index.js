@@ -12,7 +12,8 @@ template.innerHTML = `
   <div>
     <h1>A simple test</h1>
     
-    <my-button label="This is Cool"></my-button>
+    <my-button></my-button>
+
   </div>
 `;
 
@@ -23,16 +24,10 @@ class App extends HTMLElement {
     this._shadowRoot = this.attachShadow({ mode: 'open' });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$input = this._shadowRoot.querySelector('input');
-    this.$input.addEventListener('input', this._handleChange.bind(this));
+    const element = this._shadowRoot.querySelector('my-button');
+    element.label = 'Click Me';
 
-    this.$allbuttons = this._shadowRoot.querySelectorAll('my-button');
-  }
-
-  _handleChange() {
-    this.$allbuttons.forEach(element => {
-      element.setAttribute('label', this.$input.value)
-    });
+    this._shadowRoot.querySelector('my-button').onClick = value => console.log(value);
   }
 }
 

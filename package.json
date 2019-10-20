@@ -1,0 +1,22 @@
+{
+  "name": "dd-appLauncher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "stop": "pkill $(pgrep -fl webpack-dev-server)",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Doug Donahue",
+  "license": "N/A",
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "dependencies": {
+    "@patternfly/patternfly": "^2.36.0"
+  }
+}

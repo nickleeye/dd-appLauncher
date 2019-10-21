@@ -27,7 +27,8 @@ class App extends HTMLElement {
     const element = this._shadowRoot.querySelector('my-button');
     element.label = 'Click Me';
 
-    this._shadowRoot.querySelector('my-button').onClick = value => console.log(value);
+    this._shadowRoot.querySelector('my-button').addEventListener(
+        'onClick', value => console.log(value));
   }
 }
 

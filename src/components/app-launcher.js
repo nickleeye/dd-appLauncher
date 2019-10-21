@@ -28,26 +28,19 @@ class AppLauncher extends HTMLElement {
         this.$button = this._shadowRoot.querySelector('button');
         this.$content = this._shadowRoot.querySelector('.content');
 
-        // this.$content.style.visibility='hidden';
+        this.$content.style.display = "none";
 
         this.$button.addEventListener('click', () => {
-            this.dispatchEvent(
-                new CustomEvent('onClick', { function() {
-                        self.expandCollapse()
-                    },
-                    detail: 'Hello from within the Custom Element', // I want to pop up a drop down here I believe.
-                })
-            );
+            this.expandCollapse()
         });
-
     }
 
     expandCollapse() {
-        const l = document.getElementsByClassName(this.$content);
-        if (l.style.display === "none") {
-            l.style.display = "block";
+        this.$content = this._shadowRoot.querySelector('.content');
+        if (this.$content.style.display === "none") {
+            this.$content.style.display = "block";
         } else {
-            l.style.display = "none";
+            this.$content.style.display = "none";
         }
     }
 

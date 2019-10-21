@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/components/dd-app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/components/app-launcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/components/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/components/app-launcher.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571578430732</updated>
-      <workItem from="1571578432478" duration="45841000" />
+      <workItem from="1571578432478" duration="48028000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571668793811</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="don't want to lose changes....">
+      <created>1571684445702</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571684445702</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +144,7 @@
     <MESSAGE value="some more fiddling to learn up" />
     <MESSAGE value="Change css back to what I had originally" />
     <MESSAGE value="changes added to start dd-app-launcher..." />
-    <option name="LAST_COMMIT_MESSAGE" value="changes added to start dd-app-launcher..." />
+    <MESSAGE value="don't want to lose changes...." />
+    <option name="LAST_COMMIT_MESSAGE" value="don't want to lose changes...." />
   </component>
 </project>

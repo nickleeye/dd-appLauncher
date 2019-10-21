@@ -1,9 +1,13 @@
+const path = require('path');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+      require.resolve('@patternfly/patternfly/components/AppLauncher/app-launcher.css'),
+    './src/index.js',
+  ],
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     contentBase: './dist'
@@ -12,6 +16,10 @@ module.exports = {
     rules:[
       {
         test:/\.css$/,
+        include: [
+            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, 'node_modules/@patternfly/patternfly'),
+        ],
         use:['style-loader','css-loader']
       }
     ]

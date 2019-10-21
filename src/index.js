@@ -1,4 +1,4 @@
-import './components/dd-app-launcher.js'
+import './components/app-launcher.js'
 
 const template = document.createElement('template');
 
@@ -12,7 +12,7 @@ template.innerHTML = `
   <div>
     <h1>App-Launcher</h1>
     
-    <dd-app-launcher></dd-app-launcher>
+    <app-launcher></app-launcher>
 
   </div>
 `;
@@ -27,7 +27,7 @@ class App extends HTMLElement {
     //const element = this._shadowRoot.querySelector('my-button');
     //element.label = 'Click Me';
 
-    this._shadowRoot.querySelector('dd-app-launcher').addEventListener(
+    this._shadowRoot.querySelector('app-launcher').addEventListener(
         'onClick', value => console.log(value));
   }
 }

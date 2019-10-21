@@ -1,8 +1,7 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-    <link rel="stylesheet" href="yourcss1.css">
-      /*@import '~patternfly/patternfly/components/Button/button.scss/button.css';*/
+      @import '~@patternfly/patternfly/components/Button/button.scss/button.css';
   </style>
   
   <div class="container">
@@ -22,7 +21,7 @@ class Button extends HTMLElement {
         this.$button.addEventListener('click', () => {
             this.dispatchEvent(
                 new CustomEvent('onClick', {
-                    detail: 'Hello from within the Custom Element',
+                    detail: 'Hello from within the Custom Element', // I want to pop up a drop down here I believe.
                 })
             );
         });

@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/components/my-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/components/my-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/components/my-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/components/dd-app-launcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571578430732</updated>
-      <workItem from="1571578432478" duration="30059000" />
+      <workItem from="1571578432478" duration="33792000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -111,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571657795390</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change css back to what I had originally">
+      <created>1571663475146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571663475146</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +132,7 @@
     <MESSAGE value="initial commit of simple webcomponent..." />
     <MESSAGE value="test Button working..." />
     <MESSAGE value="some more fiddling to learn up" />
-    <option name="LAST_COMMIT_MESSAGE" value="some more fiddling to learn up" />
+    <MESSAGE value="Change css back to what I had originally" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change css back to what I had originally" />
   </component>
 </project>

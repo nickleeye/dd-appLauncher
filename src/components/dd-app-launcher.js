@@ -1,11 +1,12 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-      @import '~@patternfly/patternfly/components/Button/button.scss/button.css';
+    @import '../../node_modules/@patternfly/patternfly/_base.scss;
+    @import '../../node_modules/@patternfly/patternfly/components/AppLauncher/app-launcher.css;
   </style>
   
   <div class="container">
-    <button as-atom>Label</button>
+    <button as-atom></button>
   </div>
 `;
 
@@ -54,4 +55,4 @@ class Button extends HTMLElement {
     }
 }
 
-window.customElements.define('my-button', Button);
+window.customElements.define('dd-app-launcher', Button);

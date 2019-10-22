@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/patternfly.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,19 +30,20 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/app-launcher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dist" />
+      <recent name="$PROJECT_DIR$/dist/css" />
       <recent name="$PROJECT_DIR$/src/components/app-launcher" />
+      <recent name="$PROJECT_DIR$/dist" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/src/components/app-launcher" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/dist/css" />
-      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/src/demo" />
     </key>
   </component>
@@ -99,7 +102,7 @@
       <updated>1571578430732</updated>
       <workItem from="1571578432478" duration="116020000" />
       <workItem from="1571764814824" duration="6064000" />
-      <workItem from="1571777208810" duration="5117000" />
+      <workItem from="1571777208810" duration="8926000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -157,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571752494547</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="OK back to functionality working....">
+      <created>1571782883763</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571782883763</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +195,7 @@
     <MESSAGE value="don't want to lose changes...." />
     <MESSAGE value="Have expand and collapse working" />
     <MESSAGE value="get css stuff done..." />
-    <option name="LAST_COMMIT_MESSAGE" value="get css stuff done..." />
+    <MESSAGE value="OK back to functionality working...." />
+    <option name="LAST_COMMIT_MESSAGE" value="OK back to functionality working...." />
   </component>
 </project>

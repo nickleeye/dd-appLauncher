@@ -1,5 +1,5 @@
 const template = document.createElement('template');
-template.innerHTML = `
+template.innerHTML = `  
 <app-launcher id="appluancher1">
     <nav class="pf-c-app-launcher pf-m-expanded" aria-label="Application launcher">
       <button id="app-launcher-example-expanded-button" class="pf-c-app-launcher__toggle" aria-expanded="false" aria-label="Application launcher">

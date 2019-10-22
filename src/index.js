@@ -1,7 +1,4 @@
-/* app-launcher webcomponent */
-// require('app-launcher.component.js')
-
-import './components/app-launcher.js'
+import './components/app-launcher/app-launcher.js'
 
 const template = document.createElement('template');
 
@@ -15,7 +12,7 @@ template.innerHTML = `
   <div>
     <h1>App-Launcher</h1>
 
-    <app-launcher id="testing"></app-launcher>
+    <app-launcher></app-launcher>
 
   </div>
 `;

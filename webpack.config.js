@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: [
       require.resolve('@patternfly/patternfly/components/AppLauncher/app-launcher.css'),
-    './src/index.js',
+    './src/demo/index.js',
   ],
   output: {
     filename: 'bundle.js',

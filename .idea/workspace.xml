@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dd-appLauncher/dist/css/app-launcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dd-appLauncher/dist/css/patternfly-base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dd-appLauncher/dist/css/patternfly.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dd-appLauncher/src/demo/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/components/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/components/app-launcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dd-appLauncher/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +34,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dd-appLauncher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dd-appLauncher/dist/css" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../dd-appLauncher/dist/css" />
+      <recent name="$PROJECT_DIR$/../dd-appLauncher/dist" />
+      <recent name="$PROJECT_DIR$/../dd-appLauncher/src/demo" />
       <recent name="$PROJECT_DIR$/../dd-appLauncher" />
       <recent name="$PROJECT_DIR$/../dd-appLauncher/src" />
-      <recent name="$PROJECT_DIR$/../dd-appLauncher/src/components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571578430732</updated>
-      <workItem from="1571578432478" duration="48028000" />
+      <workItem from="1571578432478" duration="109214000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -132,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571684445702</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Have expand and collapse working">
+      <created>1571686492775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571686492775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +163,7 @@
     <MESSAGE value="Change css back to what I had originally" />
     <MESSAGE value="changes added to start dd-app-launcher..." />
     <MESSAGE value="don't want to lose changes...." />
-    <option name="LAST_COMMIT_MESSAGE" value="don't want to lose changes...." />
+    <MESSAGE value="Have expand and collapse working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Have expand and collapse working" />
   </component>
 </project>

@@ -1,73 +1,67 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-    @import '@patternfly/patternfly/components/AppLauncher/app-launcher.css;
-  </style>
-  
-  <div class="container">
-    <button></button>
-     
-    <div class="content">
-        <ul>
-            <li>This is just some random content.</li>
-            <li>This is just some random content.</li>
-            <li>This is just some random content.</li>
-            <li>This is just some random content.</li>
-        </ul>
-    </div>
-  </div>
+<app-launcher id="app-launcher1">
+    <nav class="app-launcher" aria-label="Application launcher">
+      <button id="app-launcher-example-expanded-button" class="btn app-launcher-toggle" aria-expanded="true" aria-label="Application launcher">
+        <i class="fas fa-th" aria-hidden="true"></i>
+      </button>
+      <ul class="app-launcher-menu" aria-labelledby="app-launcher-example-expanded-button">
+        <li><a class="app-launcher-menu-item" href="#">
+            Link
+          </a>
+        </li>
+        <li><button class="app-launcher-menu-item">
+            Action
+          </button>
+        </li>
+        <li><a class="app-launcher-menu-item m-disabled" href="#" aria-disabled="true" tabindex="-1">
+            Disabled link
+          </a>
+        </li>
+      </ul>
+    </nav>
+</app-launcher>
 `;
 
 class AppLauncher extends HTMLElement {
     constructor() {
         super();
-        this._shadowRoot = this.attachShadow({ mode: 'open' });
-        this._shadowRoot.appendChild(template.content.cloneNode(true));
-
-        this.$container = this._shadowRoot.querySelector('.container');
-        this.$button = this._shadowRoot.querySelector('button');
-        this.$content = this._shadowRoot.querySelector('.content');
-
-        this.$content.style.display = "none";
-
-        this.$button.addEventListener('click', () => {
-            this.expandCollapse()
-        });
-    }
-
-    expandCollapse() {
-        this.$content = this._shadowRoot.querySelector('.content');
-        if (this.$content.style.display === "none") {
-            this.$content.style.display = "block";
-        } else {
-            this.$content.style.display = "none";
-        }
     }
 
     connectedCallback() {
-        if (this.hasAttribute('as-atom')) {
-            this.$container.style.padding = '0px';
+        this._button = this.querySelector('.btn');
+        let menu = this.querySelector('.app-launcher-menu');
+
+        // Hide menu as default
+        menu.style.display ='none'
+
+        this._button.addEventListener('click', () => {
+            this.toggle();
+        });
+
+        // ignore clicks on disabled
+        document.addEventListener('click', (event) => {
+            if (event.target.classList.contains('disabled')) {
+                return false;
+            } else {
+                dispatchEvent(new CustomEvent('app-launcher-menu.itemClicked', {}));
+            }
+        });
+
+        this.initialized = true;
+        this.dispatchEvent(new CustomEvent('app-launchers.initialized', {}));
+    }
+
+    /**
+     *Toggle the dropdown
+     */
+    toggle() {
+        let menu = this.querySelector('.app-launcher-menu');
+        if (menu.style.display === "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
         }
-    }
-
-    get label() {
-        return this.getAttribute('label');
-    }
-
-    set label(value) {
-        this.setAttribute('label', value);
-    }
-
-    static get observedAttributes() {
-        return ['label'];
-    }
-
-    attributeChangedCallback(name, oldVal, newVal) {
-        this.render();
-    }
-
-    render() {
-        this.$button.innerHTML;
     }
 }
 

@@ -1,10 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>App-Launcher</title>
-    </head>
-    <body>
-        <my-app></my-app>
-        <script src="./bundle.js"></script>
-    </body>
+
+<head>
+    <title>app-launcher example</title>
+        <link rel="stylesheet" href="./css/patternfly.css">
+        <link rel="stylesheet" href="./css/patternfly-base.css">
+        <link rel="stylesheet" href="./css/app-launcher.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>AppLauncher</h1>
+    </div>
+
+    <app-launcher id="applauncher1">
+        <nav class="app-launcher" aria-label="Application launcher">
+            <button class="btn app-launcher-toggle" type="button" id="applauncher2" data-toggle="applauncher" aria-haspopup="true" aria-expanded="true">
+            </button>
+            <ul class="app-launcher-menu">
+                <li>
+                    <a class="app-launcher-menu-item" href="#">Link</a>
+                </li>
+                <li>
+                    <button class="app-launcher-menu-item">Action</button>
+                </li>
+                <li>
+                    <a class="app-launcher-menu-item  disabled" href="#" aria-disabled="true" tabindex="-1">Disabled link</a>
+                </li>
+            </ul>
+        </nav>
+    </app-launcher>
+</div>
+</div>
+
+<script src="./bundle.js"></script>
+
+</body>
+
 </html>

@@ -26,7 +26,6 @@
     "webpack-dev-server": "^3.5.1"
   },
   "dependencies": {
-    "@patternfly/patternfly": "^2.36.0",
-    "patternfly-webcomponents": "^0.3.0"
+    "@patternfly/patternfly": "^2.36.0"
   }
 }

@@ -7,17 +7,18 @@ template.innerHTML = `
     <h1>App-Launcher</h1>
 
     <dd-app-launcher id="dd-app-launcher">
+<!--      <ul slot="items" class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >-->
       <ul class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >
         <li><a class="pf-c-app-launcher__menu-item" href="#">
-            Link
+            My Link
           </a>
         </li>
         <li><button class="pf-c-app-launcher__menu-item">
-            Action
+            My Action
           </button>
         </li>
         <li><a class="pf-c-app-launcher__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1">
-            Disabled link
+            My Disabled link
           </a>
         </li>
       </ul>

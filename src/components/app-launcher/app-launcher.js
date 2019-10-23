@@ -12,7 +12,7 @@ template.innerHTML = `
       </button>
 <!--      <slot name="items"></slot>-->
       <ul class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >
-        <li><a class="pf-c-app-launcher__menu-item" href="#">
+        <li><a class="v" href="#">
             Link
           </a>
         </li>
@@ -81,7 +81,7 @@ export class AppLauncher extends HTMLElement {
 
         // hide dropdown at start
         const menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
-        // const menu = this._shadowRoot.querySelector('nav slot'); <-- to use slots the CSS would need to change.
+        //const menu = this._shadowRoot.querySelector('nav slot');
         menu !== null && menu.setAttribute('hidden', 'true');
     }
 
@@ -90,7 +90,7 @@ export class AppLauncher extends HTMLElement {
      */
     toggle() {
         const  menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
-        // const menu = this._shadowRoot.querySelector('nav slot');
+        // const menu = this._shadowRoot.querySelector('slot');
         if (menu === null) {
             return;
         }
@@ -106,8 +106,8 @@ export class AppLauncher extends HTMLElement {
      */
     disableClick() {
         const self = this._shadowRoot;
-        const items = this._shadowRoot.querySelectorAll('ul.pf-c-app-launcher__menu li a, ' +
-            'pf-c-app-launcher__menu li button');
+        const items = this._shadowRoot.querySelectorAll('pf-c-app-launcher__menu-item');
+
         for (let i = 0; i < items.length; i++) {
             items[i].onclick = function () {
                 if (items[i].parentNode.classList.contains('disabled')) {
@@ -120,6 +120,16 @@ export class AppLauncher extends HTMLElement {
     }
 
     /**
+     * Called when element's attribute value has changed
+     *
+     * @param {string} attrName The attribute name that has changed
+     * @param {string} oldValue The old attribute value
+     * @param {string} newValue The new attribute value
+     */
+    attributeChangedCallback(attrName, oldValue, newValue) {
+    }
+
+    /**
      *  get id attribute
      *
      * @returns {string} the components id
@@ -129,7 +139,7 @@ export class AppLauncher extends HTMLElement {
     }
 
     /**
-     *  set id attribute
+     *  set 'id' attribute
      *
      * @param {string} 'value' the components id
      */
@@ -138,13 +148,38 @@ export class AppLauncher extends HTMLElement {
     }
 
     /**
-     * Called when element's attribute value has changed
+     *  get 'items' attribute
      *
-     * @param {string} attrName The attribute name that has changed
-     * @param {string} oldValue The old attribute value
-     * @param {string} newValue The new attribute value
+     * @returns {array} the UL items
      */
-    attributeChangedCallback(attrName, oldValue, newValue) {
+    // get items() {
+    //     return this.getAttribute('items');
+    // }
+
+    /**
+     *  set items attribute
+     *
+     * @param {array} 'items' list of 'pf-c-app-launcher__menu-item' items to add to UL
+     */
+    set items(items) {
+        if (items === null || items.length == 0) {
+            return
+        }
+
+        // Create an unordered list
+        const menu = this._shadowRoot.createElement('ul')
+        menu.setAttribute('class', 'pf-c-app-launcher__menu')
+        menu.setAttribute('aria-labelledby', "app-launcher-example-expanded-button")
+
+        // add li items
+        items.forEach(function (item) {
+            let li = this._shadowRoot.createElement('li');
+            li.textContent = item;
+            menu.appendChild(li);
+        });
+
+
+        this.setAttribute('id', value);
     }
 }
 

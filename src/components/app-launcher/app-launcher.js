@@ -1,5 +1,5 @@
 const template = document.createElement('template');
-template.innerHTML = `  
+template.innerHTML = `
 <app-launcher id="appluancher1">
     <nav class="pf-c-app-launcher pf-m-expanded" aria-label="Application launcher">
       <button id="app-launcher-example-expanded-button" class="pf-c-app-launcher__toggle" aria-expanded="false" aria-label="Application launcher">
@@ -25,7 +25,7 @@ template.innerHTML = `
 
 export class AppLauncher extends HTMLElement {
 
-    /*
+    /**
      * Called every time the element is inserted into the DOM
      */
     connectedCallback() {
@@ -65,7 +65,7 @@ export class AppLauncher extends HTMLElement {
         this.disableClick();
     }
 
-    /*
+    /**
      * An instance of the element is created or upgraded
      */
     constructor() {
@@ -108,6 +108,34 @@ export class AppLauncher extends HTMLElement {
             };
         }
     }
+
+    /**
+     *  get id attribute
+     *
+     * @returns {string} teh components id
+     */
+    get id() {
+        return this.getAttribute('id');
+    }
+
+    /**
+     *  set id attribute
+     *
+     * @param {string} 'value' the components id
+     */
+    set id(value) {
+        this.setAttribute('id', value);
+    }
+
+    /**
+     * Called when element's attribute value has changed
+     *
+     * @param {string} attrName The attribute name that has changed
+     * @param {string} oldValue The old attribute value
+     * @param {string} newValue The new attribute value
+     */
+    attributeChangedCallback(attrName, oldValue, newValue) {
+    }
 }
 
-window.customElements.define('app-launcher', AppLauncher);
+window.customElements.define('dd-app-launcher', AppLauncher);

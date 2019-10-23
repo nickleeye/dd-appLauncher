@@ -4,14 +4,14 @@ const template = document.createElement('template');
 
 template.innerHTML = `
   <style>
-    @import './styles/app-launcher.css';
-    @import './styles/patternfly-base.css';
+    <link rel="base" href="/patternfly-base.css" />
+    <link rel="app-launcher" href="/app-launcher.css" />
   </style>
   
   <div>
     <h1>App-Launcher</h1>
 
-    <app-launcher></app-launcher>
+    <dd-app-launcher id="dd-app-launcher"></dd-app-launcher>
 
   </div>
 `;
@@ -23,8 +23,6 @@ class App extends HTMLElement {
     this._shadowRoot = this.attachShadow({ mode: 'open' });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this._shadowRoot.querySelector('app-launcher').addEventListener(
-        'onClick', value => console.log(value));
   }
 }
 

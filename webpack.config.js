@@ -25,10 +25,10 @@ module.exports = {
           }
         ],
         test: /\.css$/,
-        include: [
-            path.resolve(__dirname, 'src/css'),
-            //path.resolve(__dirname, 'node_modules/@patternfly/patternfly'),
-        ],
+        // include: [
+        //     path.resolve(__dirname, 'src/css'),
+        //     path.resolve(__dirname, 'node_modules/@patternfly/patternfly'),
+        // ],
         use:['style-loader','css-loader']
       }
     ]

@@ -1,11 +1,17 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<style>
+  @import '@patternfly/patternfly/patternfly-base.css';
+  @import '@patternfly/patternfly/components/AppLauncher/app-launcher.css';
+</style>
+
 <app-launcher id="appluancher1">
     <nav class="pf-c-app-launcher pf-m-expanded" aria-label="Application launcher">
       <button id="app-launcher-example-expanded-button" class="pf-c-app-launcher__toggle" aria-expanded="false" aria-label="Application launcher">
         <i class="fas fa-th" aria-hidden="true"></i>
       </button>
-      <ul class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button">
+<!--      <slot name="items"></slot>-->
+      <ul class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >
         <li><a class="pf-c-app-launcher__menu-item" href="#">
             Link
           </a>
@@ -31,7 +37,7 @@ export class AppLauncher extends HTMLElement {
     connectedCallback() {
         this._button = this._shadowRoot.querySelector('.pf-c-app-launcher__toggle');
         this._disabled = /\bdisabled/.test(this._button.className);
-        let menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
+        const menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
 
         this._button.addEventListener('click', () => {
             this.toggle();
@@ -53,7 +59,7 @@ export class AppLauncher extends HTMLElement {
             if (this._disabled) {
                 return;
             }
-            let active = /\bopen/.test(this._button.parentNode.className);
+            const active = /\bopen/.test(this._button.parentNode.className);
 
             //check if dropdown is open
             if (active) {
@@ -74,17 +80,21 @@ export class AppLauncher extends HTMLElement {
         this._shadowRoot.appendChild(template.content.cloneNode(true));
 
         // hide dropdown at start
-        let menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
-        menu.setAttribute('hidden', 'true');
+        const menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
+        // const menu = this._shadowRoot.querySelector('nav slot'); <-- to use slots the CSS would need to change.
+        menu !== null && menu.setAttribute('hidden', 'true');
     }
 
     /**
      *Toggle the dropdown
      */
     toggle() {
-        let menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
-
-        if(menu.hasAttribute('hidden')){
+        const  menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
+        // const menu = this._shadowRoot.querySelector('nav slot');
+        if (menu === null) {
+            return;
+        }
+        if (menu.hasAttribute('hidden')){
             menu.removeAttribute('hidden');
         } else {
             menu.setAttribute('hidden', 'true');
@@ -95,8 +105,8 @@ export class AppLauncher extends HTMLElement {
      * Disable click on disabled items
      */
     disableClick() {
-        let self = this._shadowRoot;
-        let items = this._shadowRoot.querySelectorAll('ul.pf-c-app-launcher__menu li a, ' +
+        const self = this._shadowRoot;
+        const items = this._shadowRoot.querySelectorAll('ul.pf-c-app-launcher__menu li a, ' +
             'pf-c-app-launcher__menu li button');
         for (let i = 0; i < items.length; i++) {
             items[i].onclick = function () {
@@ -112,7 +122,7 @@ export class AppLauncher extends HTMLElement {
     /**
      *  get id attribute
      *
-     * @returns {string} teh components id
+     * @returns {string} the components id
      */
     get id() {
         return this.getAttribute('id');

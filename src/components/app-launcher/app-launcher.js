@@ -30,39 +30,39 @@ export class AppLauncher extends HTMLElement {
      */
     connectedCallback() {
         this._button = this._shadowRoot.querySelector('.pf-c-app-launcher__toggle');
-        // this._disabled = /\bdisabled/.test(this._button.className);
+        this._disabled = /\bdisabled/.test(this._button.className);
+        let menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
 
         this._button.addEventListener('click', () => {
             this.toggle();
         });
 
-        // this._shadowRoot.addEventListener('click', (event) => {
-        //     //close dropdown if clicked outside menu
-        //     if ((event.target !== menu && event.target !== this._button) &&
-        //         (!menu.contains(event.target) && !this._button.contains(event.target))) {
-        //         this._clearDropdown();
-        //     }
-        // });
+        this._shadowRoot.addEventListener('click', (event) => {
+            //close dropdown if clicked outside menu
+            if ((event.target !== menu && event.target !== this._button) &&
+                (!menu.contains(event.target) && !this._button.contains(event.target))) {
+                this.toggle()
+                // this._menu.setAttribute('hidden', 'true');
+            }
+        });
 
-        // this._shadowRoot.addEventListener('keydown', (event) => {
-        //     if (/input|textarea/.test(event.target.tagName)) {
-        //         return;
-        //     }
-        //     if (this._disabled) {
-        //         return;
-        //     }
-        //     let active = /\bopen/.test(this._button.parentNode.className);
-        //
-        //     //check if dropdown is open
-        //     if (active) {
-        //         this._keyHandler(event);
-        //     }
-        // });
+        this._shadowRoot.addEventListener('keydown', (event) => {
+            if (/input|textarea/.test(event.target.tagName)) {
+                return;
+            }
+            if (this._disabled) {
+                return;
+            }
+            let active = /\bopen/.test(this._button.parentNode.className);
+
+            //check if dropdown is open
+            if (active) {
+                this._keyHandler(event);
+            }
+        });
 
         // disable click for disabled Items
         this.disableClick();
-
-        // this.initialized = true;
     }
 
     /*
@@ -75,7 +75,7 @@ export class AppLauncher extends HTMLElement {
 
         // hide dropdown at start
         let menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
-        menu.setAttribute('hidden', 'false');
+        menu.setAttribute('hidden', 'true');
     }
 
     /**

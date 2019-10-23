@@ -4,8 +4,8 @@ const template = document.createElement('template');
 
 template.innerHTML = `
   <style>
-    @import '~s@patternfly/patternfly/components/AppLauncher/app-launcher.css';
-    @import '~@patternfly/patternfly/components/patternfly-base.css';
+    @import './styles/app-launcher.css';
+    @import './styles/patternfly-base.css';
   </style>
   
   <div>

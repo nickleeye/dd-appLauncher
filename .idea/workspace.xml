@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/patternfly.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app-launcher.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/patternfly-base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,20 +32,22 @@
   <component name="ProjectId" id="1STCvglG1XJvun7QUDHHOqGkibz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/app-launcher" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/dist/css" />
       <recent name="$PROJECT_DIR$/src/components/app-launcher" />
       <recent name="$PROJECT_DIR$/dist" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/src/components/app-launcher" />
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/dist/css" />
       <recent name="$PROJECT_DIR$/src/demo" />
@@ -63,6 +69,16 @@
     <configuration name="webpack.config.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/webpack.config.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="/usr/local/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -81,6 +97,7 @@
     </configuration>
     <list>
       <item itemvalue="Node.js.webpack.config.js" />
+      <item itemvalue="npm.build" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.stop" />
     </list>
@@ -102,7 +119,7 @@
       <updated>1571578430732</updated>
       <workItem from="1571578432478" duration="116020000" />
       <workItem from="1571764814824" duration="6064000" />
-      <workItem from="1571777208810" duration="8926000" />
+      <workItem from="1571777208810" duration="18879000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -167,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571782883763</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added the style sheets back in, but still not working correctly.">
+      <created>1571787257346</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571787257346</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +220,7 @@
     <MESSAGE value="Have expand and collapse working" />
     <MESSAGE value="get css stuff done..." />
     <MESSAGE value="OK back to functionality working...." />
-    <option name="LAST_COMMIT_MESSAGE" value="OK back to functionality working...." />
+    <MESSAGE value="Added the style sheets back in, but still not working correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the style sheets back in, but still not working correctly." />
   </component>
 </project>

@@ -6,11 +6,18 @@ template.innerHTML = `
   <div>
     <h1>App-Launcher</h1>
 
-    <dd-app-launcher id="dd-app-launcher">
-<!--      <ul slot="items" class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >-->
+    <dd-app-launcher id="applauncher1">
+     <nav class="pf-c-app-launcher pf-m-expanded" aria-label="Application launcher">
+      <button id="app-launcher-example-expanded-button" class="pf-c-app-launcher__toggle" aria-expanded="false" aria-label="Application launcher">
+        <i class="fas fa-th" aria-hidden="true"></i>
+      </button>
       <ul class="pf-c-app-launcher__menu" aria-labelledby="app-launcher-example-expanded-button" >
         <li><a class="pf-c-app-launcher__menu-item" href="#">
-            My Link
+            My link
+          </a>
+        </li>
+        <li><a class="pf-c-app-launcher__menu-item" href="#">
+            My link
           </a>
         </li>
         <li><button class="pf-c-app-launcher__menu-item">
@@ -18,11 +25,18 @@ template.innerHTML = `
           </button>
         </li>
         <li><a class="pf-c-app-launcher__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1">
-            My Disabled link
+            Disabled link
+          </a>
+        </li>
+        <li><a class="pf-c-app-launcher__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1">
+            Disabled link
           </a>
         </li>
       </ul>
+    </nav>
     </dd-app-launcher>
+
+<!--    <dd-app-launcher id="applauncher2"></dd-app-launcher>-->
   </div>
 `;
 

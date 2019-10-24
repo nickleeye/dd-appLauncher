@@ -47,25 +47,12 @@ export class AppLauncher extends HTMLElement {
             //close dropdown if clicked outside menu
             if ((event.target !== menu && event.target !== this._button) &&
                 (!menu.contains(event.target) && !this._button.contains(event.target))) {
-                this.toggle()
-                // this._menu.setAttribute('hidden', 'true');
+                // this.toggle()
+                this._menu.setAttribute('hidden', 'true');
             }
         });
 
-        this._shadowRoot.addEventListener('keydown', (event) => {
-            if (/input|textarea/.test(event.target.tagName)) {
-                return;
-            }
-            if (this._disabled) {
-                return;
-            }
-            const active = /\bopen/.test(this._button.parentNode.className);
-
-            //check if dropdown is open
-            if (active) {
-                this._keyHandler(event);
-            }
-        });
+        //this.updateItems();
 
         // disable click for disabled Items
         this.disableClick();
@@ -89,7 +76,7 @@ export class AppLauncher extends HTMLElement {
      *Toggle the dropdown
      */
     toggle() {
-        const  menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
+        const menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
         // const menu = this._shadowRoot.querySelector('slot');
         if (menu === null) {
             return;
@@ -99,6 +86,21 @@ export class AppLauncher extends HTMLElement {
         } else {
             menu.setAttribute('hidden', 'true');
         }
+    }
+
+    updateItems() {
+        // get and clear local li's
+        const menu = this._shadowRoot.querySelector('.pf-c-app-launcher__menu');
+
+        // get calling class li's
+        //const s_items = this._shadowRoot.querySelectorAll('pf-c-app-launcher__menu-item');
+        const s_items = this._shadowRoot.innerHTML.getElementsByTagName('li');
+
+        // add li items
+        s_items.forEach(function (item) {
+            let nli = this._shadowRoot.createElement('li');
+            menu.appendChild(item);
+        });
     }
 
     /**
@@ -144,41 +146,6 @@ export class AppLauncher extends HTMLElement {
      * @param {string} 'value' the components id
      */
     set id(value) {
-        this.setAttribute('id', value);
-    }
-
-    /**
-     *  get 'items' attribute
-     *
-     * @returns {array} the UL items
-     */
-    // get items() {
-    //     return this.getAttribute('items');
-    // }
-
-    /**
-     *  set items attribute
-     *
-     * @param {array} 'items' list of 'pf-c-app-launcher__menu-item' items to add to UL
-     */
-    set items(items) {
-        if (items === null || items.length == 0) {
-            return
-        }
-
-        // Create an unordered list
-        const menu = this._shadowRoot.createElement('ul')
-        menu.setAttribute('class', 'pf-c-app-launcher__menu')
-        menu.setAttribute('aria-labelledby', "app-launcher-example-expanded-button")
-
-        // add li items
-        items.forEach(function (item) {
-            let li = this._shadowRoot.createElement('li');
-            li.textContent = item;
-            menu.appendChild(li);
-        });
-
-
         this.setAttribute('id', value);
     }
 }

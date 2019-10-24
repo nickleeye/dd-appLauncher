@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89eefbb4-2281-4f4b-ac7a-a35193f945d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-launcher/app-launcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +134,7 @@
       <workItem from="1571777208810" duration="37722000" />
       <workItem from="1571851091852" duration="1774000" />
       <workItem from="1571853957285" duration="1909000" />
-      <workItem from="1571856709910" duration="22817000" />
+      <workItem from="1571856709910" duration="23170000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of simple webcomponent...">
       <created>1571591290745</created>
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571872939539</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="I bit more cleanup, still lots to be done.">
+      <created>1571889680782</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571889680782</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +275,7 @@
     <MESSAGE value="added simple id atribute to element, still no css !!!!!" />
     <MESSAGE value="OK css is finally working!!! Did battle with webpack plugin for hours...." />
     <MESSAGE value="Some cleanup and disable link is working correctly now..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some cleanup and disable link is working correctly now..." />
+    <MESSAGE value="I bit more cleanup, still lots to be done." />
+    <option name="LAST_COMMIT_MESSAGE" value="I bit more cleanup, still lots to be done." />
   </component>
 </project>
